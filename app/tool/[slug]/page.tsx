@@ -83,7 +83,7 @@ export default function ToolPage({ params }: Props) {
             <div className="flex items-center gap-2 rounded-lg border border-white/[0.08] bg-white/[0.03] px-3 py-2">
               <span className="text-gray-500">访问</span>
               <span className={tool.china_accessible ? 'text-emerald-400' : 'text-gray-400'}>
-                {tool.china_accessible ? '国内直连' : '需要VPN'}
+                {tool.china_accessible ? '国内直连' : '科学上网'}
               </span>
             </div>
             {tool.monthly_visits && (
@@ -132,7 +132,7 @@ export default function ToolPage({ params }: Props) {
             </svg>
           </a>
           {tool.need_vpn && (
-            <p className="mt-3 text-sm text-gray-600">该工具在中国大陆需要VPN才能访问</p>
+            <p className="mt-3 text-sm text-gray-600">⚠️ 该工具在中国大陆需要科学上网才能访问</p>
           )}
         </div>
 

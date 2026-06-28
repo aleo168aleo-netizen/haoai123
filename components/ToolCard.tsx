@@ -41,7 +41,7 @@ export default function ToolCard({ tool }: Props) {
             </h3>
             {!tool.china_accessible && (
               <span className="shrink-0 rounded px-1 py-0.5 text-[10px] font-medium text-gray-500 bg-gray-500/10 border border-gray-500/20">
-                需VPN
+                科学上网
               </span>
             )}
           </div>

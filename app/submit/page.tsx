@@ -93,7 +93,7 @@ export default function SubmitPage() {
             <label className={labelCls}>国内可直连</label>
             <select className={inputCls} value={form.china} onChange={set('china')}>
               <option value="true">是，可以直连</option>
-              <option value="false">否，需要VPN</option>
+              <option value="false">否，需要科学上网</option>
             </select>
           </div>
           <div>
