@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { AITool, getToolColor, getInitials } from '@/lib/data/tools'
+import ToolLogo from './ToolLogo'
 
 interface Props {
   tool: AITool
@@ -28,12 +29,7 @@ export default function ToolCard({ tool }: Props) {
     >
       {/* Header */}
       <div className="mb-3 flex items-start gap-3">
-        <div
-          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-sm font-bold text-black"
-          style={{ backgroundColor: color }}
-        >
-          {initials}
-        </div>
+        <ToolLogo url={tool.url} name={tool.name} color={color} initials={initials} size={40} />
         <div className="min-w-0 flex-1">
           <div className="flex items-center gap-2">
             <h3 className="truncate font-semibold text-white group-hover:text-[#f5c518] transition-colors">
@@ -68,7 +64,7 @@ export default function ToolCard({ tool }: Props) {
         {tool.tags.slice(0, 3).map(tag => (
           <span
             key={tag}
-            className="rounded-full border border-white/[0.08] px-2 py-0.5 text-[11px] text-gray-500"
+            className="rounded-full border border-white/[0.08] px-2 py-0.5 text-[11px] text-gray-500 transition-all duration-150 hover:border-[#f5c518]/40 hover:text-[#f5c518] hover:scale-105"
           >
             {tag}
           </span>

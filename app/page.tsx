@@ -1,5 +1,7 @@
 import { tools } from '@/lib/data/tools'
 import HomeClient from '@/components/HomeClient'
+import ExternalSearch from '@/components/ExternalSearch'
+import Logo from '@/components/Logo'
 import Link from 'next/link'
 
 export default function Home() {
@@ -8,12 +10,8 @@ export default function Home() {
       {/* Header */}
       <header className="sticky top-0 z-40 border-b border-white/[0.06] bg-[#0a0a0a]/90 backdrop-blur-md">
         <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-4">
-          <Link href="/" className="flex items-center gap-2">
-            <span className="text-xl font-bold">
-              <span className="text-[#f5c518]">HAO</span>
-              <span className="text-white">AI</span>
-              <span className="text-gray-500 text-sm font-normal ml-1">导航</span>
-            </span>
+          <Link href="/">
+            <Logo size="sm" />
           </Link>
           <div className="flex items-center gap-3 text-sm">
             <Link href="/submit" className="text-gray-400 hover:text-white transition-colors">
@@ -47,6 +45,12 @@ export default function Home() {
           <p className="mb-8 text-lg text-gray-400">
             国内外AI工具一站导航，国内直连工具重点标注，帮你快速找到最适合的AI助手
           </p>
+
+          {/* External search: Baidu + Arena */}
+          <div className="mb-8">
+            <ExternalSearch />
+          </div>
+
           <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-gray-500">
             <span>🇨🇳 {tools.filter(t => t.china_accessible).length} 个国内直连</span>
             <span className="text-gray-700">·</span>
