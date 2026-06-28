@@ -56,7 +56,7 @@ export default function Home() {
             <span className="text-gray-700">·</span>
             <span>🆓 {tools.filter(t => t.pricing === 'free').length} 个完全免费</span>
             <span className="text-gray-700">·</span>
-            <span>🌏 覆盖 10 大分类</span>
+            <span>🌏 覆盖 19 大分类</span>
           </div>
         </div>
       </section>
