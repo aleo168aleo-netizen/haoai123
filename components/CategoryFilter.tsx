@@ -12,7 +12,7 @@ export default function CategoryFilter({ active, onChange, counts }: Props) {
   const all = [{ slug: 'all', name: '全部', icon: '✦' }, ...CATEGORIES]
 
   return (
-    <div className="flex flex-wrap gap-2">
+    <div className="flex gap-2 overflow-x-auto pb-1.5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:flex-wrap sm:overflow-visible sm:pb-0">
       {all.map(cat => {
         const isActive = active === cat.slug
         const count = cat.slug === 'all'
@@ -22,7 +22,7 @@ export default function CategoryFilter({ active, onChange, counts }: Props) {
           <button
             key={cat.slug}
             onClick={() => onChange(cat.slug as CategorySlug | 'all')}
-            className={`flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-sm font-medium transition-all ${
+            className={`flex shrink-0 items-center gap-1.5 rounded-full border px-3 py-1.5 text-sm font-medium transition-all ${
               isActive
                 ? 'border-[#f5c518] bg-[#f5c518] text-black'
                 : 'border-white/[0.08] bg-white/[0.03] text-gray-400 hover:border-white/20 hover:text-white'

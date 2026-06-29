@@ -40,7 +40,7 @@ export default function CategoryPage({ params }: Props) {
         </div>
       </header>
 
-      <main className="mx-auto max-w-7xl px-4 py-10">
+      <main className="mx-auto max-w-7xl px-3 sm:px-4 py-6 sm:py-10">
         <div className="mb-8">
           <div className="mb-2 flex items-center gap-3">
             <span className="text-3xl">{cat.icon}</span>
@@ -64,12 +64,12 @@ export default function CategoryPage({ params }: Props) {
         {/* Other categories */}
         <div className="mt-12 border-t border-white/[0.06] pt-8">
           <h2 className="mb-4 text-lg font-semibold text-gray-300">其他分类</h2>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex gap-2 overflow-x-auto pb-1.5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:flex-wrap sm:overflow-visible sm:pb-0">
             {CATEGORIES.filter(c => c.slug !== params.slug).map(c => (
               <Link
                 key={c.slug}
                 href={`/category/${c.slug}`}
-                className="flex items-center gap-1.5 rounded-full border border-white/[0.08] px-3 py-1.5 text-sm text-gray-400 hover:border-[#f5c518]/50 hover:text-[#f5c518] transition-all"
+                className="flex shrink-0 items-center gap-1.5 rounded-full border border-white/[0.08] px-3 py-1.5 text-sm text-gray-400 hover:border-[#f5c518]/50 hover:text-[#f5c518] transition-all"
               >
                 <span>{c.icon}</span>
                 <span>{c.name}</span>
