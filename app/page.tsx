@@ -3,6 +3,7 @@ import HomeClient from '@/components/HomeClient'
 import ExternalSearch from '@/components/ExternalSearch'
 import Logo from '@/components/Logo'
 import Link from 'next/link'
+import OpenChatButton from '@/components/OpenChatButton'
 
 export default function Home() {
   return (
@@ -42,9 +43,13 @@ export default function Home() {
           <h1 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
             发现最好用的 <span className="text-[#f5c518]">AI 工具</span>
           </h1>
-          <p className="mb-8 text-lg text-gray-400">
+          <p className="mb-5 text-lg text-gray-400">
             国内外AI工具一站导航，国内直连工具重点标注，帮你快速找到最适合的AI助手
           </p>
+
+          <div className="mb-6">
+            <OpenChatButton />
+          </div>
 
           {/* External search: Baidu + Arena */}
           <div className="mb-8">
@@ -65,6 +70,35 @@ export default function Home() {
       <main className="mx-auto max-w-7xl px-3 sm:px-4 py-6 sm:py-8">
         <HomeClient tools={tools} />
       </main>
+
+      {/* Quick links */}
+      <div className="border-t border-white/[0.04] bg-white/[0.01] py-8">
+        <div className="mx-auto max-w-7xl px-3 sm:px-4">
+          <p className="mb-4 text-sm font-medium text-gray-500">更多功能</p>
+          <div className="flex flex-wrap gap-3">
+            <Link
+              href="/guide"
+              className="flex items-center gap-2 rounded-xl border border-emerald-500/20 bg-emerald-500/5 px-4 py-3 text-sm text-emerald-400 hover:border-emerald-500/40 hover:bg-emerald-500/10 transition-all"
+            >
+              <span>🇨🇳</span>
+              <div>
+                <p className="font-medium">国内使用指南</p>
+                <p className="text-[11px] text-emerald-600">直连工具 · 免费额度 · 注册攻略</p>
+              </div>
+            </Link>
+            <Link
+              href="/builder"
+              className="flex items-center gap-2 rounded-xl border border-[#f5c518]/20 bg-[#f5c518]/5 px-4 py-3 text-sm text-[#f5c518] hover:border-[#f5c518]/40 hover:bg-[#f5c518]/10 transition-all"
+            >
+              <span>📱</span>
+              <div>
+                <p className="font-medium">AI应用生成器</p>
+                <p className="text-[11px] text-[#f5c518]/60">对话生成手机APP界面 · 实时预览</p>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </div>
 
       {/* Footer */}
       <footer className="mt-16 border-t border-white/[0.06] py-8 text-center text-sm text-gray-600">

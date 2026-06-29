@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import TopBar from '@/components/TopBar'
+import AIAssistant from '@/components/AIAssistant'
 
 export const metadata: Metadata = {
   title: 'AI导航 - 全球AI工具大全，一站式发现最好用的AI',
@@ -22,6 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="bg-[#0a0a0a] text-white antialiased min-h-screen">
         <TopBar />
         {children}
+        <AIAssistant />
       </body>
     </html>
   )

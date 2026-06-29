@@ -6,9 +6,8 @@ import { useEffect, useState } from 'react'
 const DAYS = ['日', '一', '二', '三', '四', '五', '六']
 
 const LINKS = [
-  { label: '提示词库', href: 'https://prompt.best' },
-  { label: 'AI论文', href: 'https://paperswithcode.com' },
-  { label: '开源模型', href: 'https://huggingface.co' },
+  { label: '国内使用指南', href: '/guide', internal: true },
+  { label: 'AI应用生成器', href: '/builder', internal: true },
   { label: 'AI新闻', href: 'https://36kr.com/information/AI' },
   { label: 'GitHub热榜', href: 'https://github.com/trending' },
   { label: '提交收录', href: '/submit', internal: true },
